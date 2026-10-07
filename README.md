@@ -88,12 +88,17 @@ Os percentuais são um **exemplo didático**, definidos por mim como ponto de pa
 
 ## O que mudei em relação à ferramenta do Expert
 
-- **Segunda simulação com a sugestão de 30% do salário:** coluna extra na tabela de cenários mostrando o patrimônio caso o aporte fosse a sugestão.
-- **Gráfico de pizza** com a divisão do aporte, que muda junto com o perfil.
-- **Conferências automáticas:** aviso se a divisão por perfil não somar 100% e soma por perfil na aba Apoio.
-- **Linhas extras:** total aportado do próprio bolso (para comparar com o patrimônio) e patrimônio projetado por tipo de fundo.
-- **Proteção da planilha:** só as células de entrada ficam editáveis (sem senha).
-- **Seis tipos de fundo e percentuais próprios**, escolhidos por mim.
+Comparei a minha planilha com a resolvida pelo Expert. A estrutura é a mesma (cinco perguntas, cenários, configurações, perfis com PROCV e chave composta, gráfico de pizza). O que fiz diferente:
+
+- **Uma única taxa de rendimento.** Na planilha do Expert, o patrimônio usa uma taxa e os dividendos usam outra (`taxa_mensal` e `rendimento_carteira`). Na minha, existe só `taxa_mensal`, digitada nas configurações, e ela alimenta o patrimônio e os dividendos. Assim os dois resultados são coerentes entre si.
+- **Percentual da sugestão em célula própria.** O Expert escreve `=salario*30%` direto na fórmula. Eu criei o intervalo `pct_aporte` (30%), que pode ser alterado sem mexer na fórmula: `=salario*pct_aporte`.
+- **Segunda simulação com a sugestão de 30% do salário:** na tabela de cenários, uma coluna extra mostra o patrimônio caso o aporte fosse a sugestão.
+- **Cenários com intervalos nomeados** (`taxa_mensal`, `aporte`) em vez de endereços absolutos como `$D$19`, mais uma coluna com o total aportado do próprio bolso.
+- **Patrimônio por tipo de fundo:** a divisão do aporte mostra também quanto cada tipo acumula no prazo escolhido.
+- **Lista de perfis por intervalo nomeado** (`lista_perfis`), na aba de apoio, em vez de um texto digitado dentro da validação de dados. A tabela de busca do PROCV também é um intervalo nomeado (`tabela_perfis`), em vez de colunas inteiras.
+- **Conferências automáticas:** aviso na tela se a divisão do perfil não somar 100% e soma por perfil na aba de apoio (`SOMASE`).
+- **Proteção da planilha** (sem senha): só as células de entrada ficam editáveis.
+- **Perfis e tipos de fundo próprios:** perfis Conservador, Moderado e Arrojado, e seis tipos (Papel, Logística, Lajes Corporativas, Shoppings, Fundo de Fundos e Híbrido/Desenvolvimento), com percentuais definidos por mim.
 
 ## Estrutura
 
