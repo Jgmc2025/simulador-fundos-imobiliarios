@@ -6,13 +6,19 @@ Planilha com cara de aplicativo que simula o investimento mensal em fundos imobi
 
 **Arquivo:** [`simulador-fiis.xlsx`](simulador-fiis.xlsx)
 
-## Prints (mesma simulação, dois perfis)
+## Prints (mesma simulação, três perfis)
 
 Aporte de R$ 1.000,00 por mês, 10 anos e 0,80% ao mês. Só o perfil muda: o patrimônio total é o mesmo, mas a divisão do aporte e o gráfico mudam.
 
-| Conservador | Arrojado |
-|---|---|
-| ![Perfil conservador](prints/perfil-conservador.png) | ![Perfil arrojado](prints/perfil-arrojado.png) |
+| Conservador | Moderado | Arrojado |
+|---|---|---|
+| ![Perfil conservador](prints/perfil-conservador.png) | ![Perfil moderado](prints/perfil-moderado.png) | ![Perfil arrojado](prints/perfil-arrojado.png) |
+
+### Aba de apoio
+
+Tabela de perfis, tipos de fundo e percentuais, com a chave composta usada pelo PROCV e a conferência de 100% por perfil.
+
+![Aba de apoio](prints/aba-apoio.png)
 
 ## Como usar
 
@@ -108,5 +114,7 @@ simulador-fundos-imobiliarios/
 ├── README.md
 └── prints/
     ├── perfil-conservador.png
-    └── perfil-arrojado.png
+    ├── perfil-moderado.png
+    ├── perfil-arrojado.png
+    └── aba-apoio.png
 ```
